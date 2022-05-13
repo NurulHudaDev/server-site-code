@@ -55,7 +55,8 @@ async function run() {
       const items = await cursor.toArray();
       res.send(items);
     });
-
+    
+    //add get product api id
     app.get('/product/:id',async(req, res)=>{
         const id = req.params.id;
         const query={_id: ObjectId(id)};
